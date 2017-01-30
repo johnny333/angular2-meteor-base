@@ -1,17 +1,19 @@
-<div class="row">
-    <div class="input-field col s12">
-        <input id="email" type="email" class="validate">
-        <label for="email">{{'LOGIN-PAGE.email' | translate}}</label>
+<form action="" (ngSubmit)="login()" [formGroup]="loginForm">
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="email" type="email"  formControlName="email" class="validate">
+            <label for="email">{{'LOGIN-PAGE.email' | translate}}</label>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="input-field col s12">
-        <input id="password" type="password" class="validate">
-        <label for="password">{{'LOGIN-PAGE.password' | translate}}</label>
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="password" type="password"  formControlName="password" class="validate">
+            <label for="password">{{'LOGIN-PAGE.password' | translate}}</label>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="  col s12">
-        <a class="waves-effect waves-light btn">{{'LOGIN-PAGE.login' | translate}}</a>
+    <div class="row">
+        <div class="  col s12">
+            <button class="waves-effect waves-light btn" type="submit">{{'LOGIN-PAGE.login' | translate}}</button>
+        </div>
     </div>
-</div>
+</form>
