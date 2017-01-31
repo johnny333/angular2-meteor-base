@@ -2,6 +2,24 @@
   "LOGIN-PAGE":{
     "email":"Email",
     "password":"Hasło",
-    "login":"Zaloguj"
+    "login":"Zaloguj",
+    "loginForm":"Formularz logowania",
+    "loginError":"Błędny login lub hasło"
+  },
+  "INFO-PAGE":{
+    "title":"O Nas"
+  },
+  "DASH-PAGE":{
+    "title":"Główna"
+  },
+  "CONFIG":{
+    "logout":"Wyloguj",
+    "empty":" ",
+    "close":"Zamknij",
+    "dismiss":"Anuluj"
+  },
+  "DEMO":{
+    "add":"Dodaj",
+    "addSuccess":"Dodawanie powiodło się!"
   }
 }

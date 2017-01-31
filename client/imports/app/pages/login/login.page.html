@@ -1,12 +1,13 @@
-
-<!-- Navbar goes here -->
-<navbar-component></navbar-component>
-<!-- Page Layout here -->
 <div class="row">
-
-    <div class="col s4 offset-s4">
+    <div class="col-md-12">
+        <navbar-component [pageComponentName]="getPageComponentName()"></navbar-component>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
         <login-form-component></login-form-component>
     </div>
-
-
+    <div class="col-md-4"></div>
 </div>

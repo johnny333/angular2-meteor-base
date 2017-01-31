@@ -1,0 +1,13 @@
+<form [formGroup]="addDemoForm"  (ngSubmit)="addDemo()">
+    <div class="col-md-9">
+        <input type="text" formControlName="input" class="form-control">
+    </div>
+    <button type="submit"   class="btn btn-primary col-md-3">{{ "DEMO.add" | translate }}</button>
+</form>
+<br>
+<br>
+<br>
+<br>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let element of elements | async">{{element.input}} <button (click)="deleteDemo(element._id)">X</button></li>
+</ul>

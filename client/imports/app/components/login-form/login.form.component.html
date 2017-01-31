@@ -1,19 +1,22 @@
-<form action="" (ngSubmit)="login()" [formGroup]="loginForm">
-    <div class="row">
-        <div class="input-field col s12">
-            <input id="email" type="email"  formControlName="email" class="validate">
-            <label for="email">{{'LOGIN-PAGE.email' | translate}}</label>
-        </div>
+<div class="card text-center">
+    <div class="card-header">
     </div>
-    <div class="row">
-        <div class="input-field col s12">
-            <input id="password" type="password"  formControlName="password" class="validate">
-            <label for="password">{{'LOGIN-PAGE.password' | translate}}</label>
-        </div>
+    <div class="card-block">
+        <h4 class="card-title">{{"LOGIN-PAGE.loginForm" | translate }}</h4>
+        <form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
+            <div class="input-group " [ngClass]="{'has-error':!loginForm.controls['email'].valid}" >
+                <span class="input-group-addon" id="basic-addon1"></span>
+                <input class="form-control" formControlName="email" id="email" name="email" type="email" placeholder="{{'LOGIN-PAGE.email' | translate }}" aria-describedby="basic-addon1">
+              </div>
+            <br>
+            <div class="input-group" [ngClass]="{'has-error':!loginForm.controls['password'].valid}">
+                <span class="input-group-addon" id="basic-addon1"></span>
+                <input class="form-control" formControlName="password" autocomplete="false" id="password" name="password" type="password" placeholder="{{'LOGIN-PAGE.password' | translate }}" aria-describedby="basic-addon1">
+            </div>
+            <br>
+            <button type="button"  type="submit" class="btn btn-secondary">{{'LOGIN-PAGE.login' | translate }}</button>
+        </form>
     </div>
-    <div class="row">
-        <div class="  col s12">
-            <button class="waves-effect waves-light btn" type="submit">{{'LOGIN-PAGE.login' | translate}}</button>
-        </div>
+    <div class="card-footer text-muted">
     </div>
-</form>
+</div>

@@ -10,7 +10,7 @@ import {routes, ROUTES_PROVIDERS} from './app.routes';
 import {PAGES_DECLARATIONS} from "./pages/index";
 import {COMPONENT_DECLARATIONS} from "./components/index";
 import {SERVICES_DECLARATIONS} from "./services/index";
-
+import { SweetAlertService } from 'ng2-sweetalert2';
 @NgModule({
     imports: [
         BrowserModule,
